@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Store - Dashboard</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <nav class="app-nav">
+        <a href="../../index.html" class="brand-logo">
+            <span class="brand-badge">AURA</span>
+            E-Commerce
+        </a>
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-link">← Hub</a>
+            <span class="branch-indicator">
+                <span class="branch-dot"></span>
+                Branch: feature/dashboard
+            </span>
+        </div>
+    </nav>
+
+    <main class="dashboard-layout">
+        <header class="dashboard-header">
+            <div class="welcome-user">
+                <h1>Hello, Sree Ram 👋</h1>
+                <p>Welcome back! Here is your e-commerce order activity.</p>
+            </div>
+            <a href="../checkout/checkout.html" class="btn-primary">+ New Order</a>
+        </header>
+
+        <!-- Quick Metrics -->
+        <section class="metrics-row">
+            <div class="metric-card">
+                <div class="metric-icon">📦</div>
+                <div class="metric-data">
+                    <h4>Total Orders</h4>
+                    <div class="metric-value">4 Orders</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">💳</div>
+                <div class="metric-data">
+                    <h4>Total Spent</h4>
+                    <div class="metric-value">$348.00</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⭐</div>
+                <div class="metric-data">
+                    <h4>Reward Points</h4>
+                    <div class="metric-value">1,420 pts</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Orders (2 items) -->
+        <section class="glass-card orders-card">
+            <h3 class="section-title"><span>🛒</span> Recent Purchases</h3>
+            
+            <div class="products-list">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-info">
+                        <div class="product-img-box">🎧</div>
+                        <div class="product-details">
+                            <h4>Aura ANC Studio Wireless Headphones</h4>
+                            <p>Order #AU-9081 • Matte Black</p>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <span class="status-badge badge-shipped">Delivered</span>
+                        <div class="product-price">$199.00</div>
+                        <button class="btn-secondary reorder-btn" data-product="Headphones">Reorder</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <div class="product-info">
+                        <div class="product-img-box">⌚</div>
+                        <div class="product-details">
+                            <h4>Minimalist Chrono Sapphire Watch</h4>
+                            <p>Order #AU-8842 • Italian Tan Leather</p>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <span class="status-badge badge-transit">In Transit</span>
+                        <div class="product-price">$149.00</div>
+                        <button class="btn-secondary reorder-btn" data-product="Watch">Track</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
