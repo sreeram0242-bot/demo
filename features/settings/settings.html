@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Store - Account Settings</title>
+    <link rel="stylesheet" href="../../shared/style.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+    <nav class="app-nav">
+        <a href="../../index.html" class="brand-logo">
+            <span class="brand-badge">AURA</span>
+            E-Commerce
+        </a>
+        <div class="nav-links">
+            <a href="../../index.html" class="nav-link">← Hub</a>
+            <span class="branch-indicator">
+                <span class="branch-dot"></span>
+                Branch: feature/settings
+            </span>
+        </div>
+    </nav>
+
+    <main class="settings-container">
+        <div class="settings-header">
+            <h1>Account Settings ⚙️</h1>
+            <p>Manage your account profile and communication preferences.</p>
+        </div>
+
+        <div id="save-alert" class="save-alert">
+            ✓ Preferences saved successfully!
+        </div>
+
+        <div class="glass-card">
+            <form id="settings-form">
+                <!-- Personal Info -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Personal Profile</h3>
+                    <div class="input-group">
+                        <label class="input-label" for="user-name">Full Name</label>
+                        <input type="text" id="user-name" class="input-field" value="Sree Ram">
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label" for="user-email">Email Address</label>
+                        <input type="email" id="user-email" class="input-field" value="sreeram@example.com">
+                    </div>
+                </div>
+
+                <!-- Notifications & Preferences -->
+                <div class="settings-section">
+                    <h3 class="settings-section-title">Notifications</h3>
+                    
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <h4>Order Tracking SMS</h4>
+                            <p>Receive real-time delivery alerts via SMS</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="sms-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-item">
+                        <div class="toggle-info">
+                            <h4>Promotional Offers</h4>
+                            <p>Get notified about weekly discounts and drops</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="promo-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%;">
+                    Save Changes
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="settings.js"></script>
+</body>
+</html>
