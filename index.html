@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Store - Branch Architecture Hub</title>
+    <link rel="stylesheet" href="shared/style.css">
+    <style>
+        .hero {
+            max-width: 1100px;
+            margin: 3.5rem auto 2.5rem;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 40%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto 4rem;
+            padding: 0 1.5rem;
+        }
+        .feature-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-hover);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: rgba(99, 102, 241, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+        .feature-meta {
+            font-size: 0.8rem;
+            color: #818cf8;
+            background: rgba(99, 102, 241, 0.08);
+            padding: 0.35rem 0.65rem;
+            border-radius: var(--radius-sm);
+            width: fit-content;
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+        .architecture-banner {
+            max-width: 1100px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem 2rem;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="app-nav">
+        <a href="index.html" class="brand-logo">
+            <span class="brand-badge">AURA</span>
+            E-Commerce
+        </a>
+        <div class="nav-links">
+            <span class="branch-indicator">
+                <span class="branch-dot"></span>
+                Branch: main
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Feature-by-Folder Hub</h1>
+            <p>
+                Each feature operates in its own isolated branch and folder. Zero merge conflicts, clean modularity, and rapid team collaboration.
+            </p>
+        </section>
+
+        <section class="features-grid">
+            <!-- Login Card -->
+            <div class="feature-card">
+                <div>
+                    <div class="feature-icon">🔐</div>
+                    <div class="feature-meta">features/login/</div>
+                    <h3>Login Feature</h3>
+                    <p>Clean authentication screen with email, password, and social sign-in.</p>
+                </div>
+                <a href="features/login/login.html" class="btn-primary">View Login</a>
+            </div>
+
+            <!-- Dashboard Card -->
+            <div class="feature-card">
+                <div>
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-meta">features/dashboard/</div>
+                    <h3>Dashboard Feature</h3>
+                    <p>Customer overview, order tracking, and purchase stats for 2 flagship products.</p>
+                </div>
+                <a href="features/dashboard/dashboard.html" class="btn-primary">View Dashboard</a>
+            </div>
+
+            <!-- Settings Card -->
+            <div class="feature-card">
+                <div>
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-meta">features/settings/</div>
+                    <h3>Settings Feature</h3>
+                    <p>User profile management, notifications, and dark mode toggles.</p>
+                </div>
+                <a href="features/settings/settings.html" class="btn-primary">View Settings</a>
+            </div>
+
+            <!-- Checkout Card -->
+            <div class="feature-card">
+                <div>
+                    <div class="feature-icon">🛍️</div>
+                    <div class="feature-meta">features/checkout/</div>
+                    <h3>Checkout Feature</h3>
+                    <p>Quick checkout with 2 products, item subtotal calculation, and instant payment mock.</p>
+                </div>
+                <a href="features/checkout/checkout.html" class="btn-primary">View Checkout</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
